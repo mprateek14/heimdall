@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Heimdall</title>
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1><img src="icons/32.png" width="20" height="20" alt=""> Heimdall</h1>
+    <a id="library" href="library.html" target="_blank">Recordings</a>
+  </header>
+
+  <section>
+    <h2>What to record</h2>
+    <div class="segmented" id="mode" role="radiogroup">
+      <button type="button" data-value="audio" role="radio">Audio only</button>
+      <button type="button" data-value="video" role="radio">Video only</button>
+      <button type="button" data-value="both" role="radio">Audio + video</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>From</h2>
+    <div class="segmented" id="source" role="radiogroup">
+      <button type="button" data-value="tab" role="radio">This tab</button>
+      <button type="button" data-value="desktop" role="radio">Screen or window</button>
+    </div>
+  </section>
+
+  <section id="audio-section">
+    <h2>Audio sources</h2>
+    <label class="check"><input type="checkbox" id="tabAudio"> <span id="tabAudioLabel">Tab audio</span></label>
+    <label class="check"><input type="checkbox" id="mic"> <span>Microphone</span></label>
+  </section>
+
+  <section>
+    <label class="check"><input type="checkbox" id="keepCopy"> <span>Also keep a copy in Heimdall for 7 days</span></label>
+  </section>
+
+  <p id="notice" role="status"></p>
+  <button id="start" class="primary" type="button">Start recording</button>
+  <p class="hint">Each recording opens in its own small window. Stop saves the file to Downloads/Heimdall and closes the window. To record another tab, switch to it and click the icon again.</p>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

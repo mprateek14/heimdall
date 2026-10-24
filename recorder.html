@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Heimdall recorder</title>
+  <link rel="icon" href="icons/32.png">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="recorder.css">
+</head>
+<body>
+  <div id="app">
+    <div class="top">
+      <video id="preview" muted playsinline hidden></video>
+      <div class="info">
+        <div class="title-row">
+          <span id="title" class="title">Heimdall</span>
+          <span id="badge" class="badge"></span>
+        </div>
+        <div class="status-row">
+          <span id="dot" class="dot" hidden></span>
+          <span id="status">Starting...</span>
+          <span id="timer" class="timer">00:00</span>
+        </div>
+        <div id="meter-wrap" class="meter" hidden><div id="meter-bar"></div></div>
+      </div>
+    </div>
+
+    <p id="message" role="status" hidden></p>
+
+    <div class="controls" id="controls" hidden>
+      <button id="begin" class="primary" type="button" hidden>Start recording</button>
+      <button id="pause" type="button" hidden>Pause</button>
+      <button id="stop" class="danger" type="button" hidden>Stop and save</button>
+    </div>
+
+    <section id="result" hidden>
+      <video id="playback" controls playsinline hidden></video>
+      <audio id="playback-audio" controls hidden></audio>
+      <div class="controls">
+        <button id="download" class="primary" type="button">Save file</button>
+        <button id="close" type="button">Close</button>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="recorder.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body { width: 320px; padding: 14px 16px 16px; }
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+h1 { display: flex; align-items: center; gap: 7px; }
+h1 img { border-radius: 4px; }
+
+section { margin-bottom: 14px; }
+
+.segmented { display: flex; }
+
+.segmented button {
+  flex: 1;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 7px 4px;
+  font-size: 13px;
+}
+
+.segmented button:first-child { border-radius: 6px 0 0 6px; margin-left: 0; }
+.segmented button:last-child { border-radius: 0 6px 6px 0; }
+
+.segmented button[aria-checked="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  position: relative;
+}
+
+.check { display: flex; gap: 8px; align-items: center; padding: 3px 0; }
+.check.disabled { color: var(--muted); }
+
+#start { width: 100%; padding: 9px; }
+
+#notice { min-height: 1.4em; margin: 0 0 8px; color: var(--danger); font-size: 13px; }
+
+.hint { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
